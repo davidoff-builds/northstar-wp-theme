@@ -9,6 +9,10 @@
 
 get_header(); ?>
 
+<section id="single-post-banner" class="full-sec-banner">
+		<img src="<?php the_field('section_banner_image'); ?>" alt="" class="img-full-width img-responsive">
+</section>
+
 	<section id="solo-post">
 		<div class="container-fluid">
 			<?php

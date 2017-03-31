@@ -1,15 +1,21 @@
 $primary-blue: #000;
+$blue : #1a8df8;
 
 
 // Mixins
 @mixin bp($point) {
   
+  $xs: "(min-width: 450px)";
   $small: "(min-width: 767px)";
   $medium: "(min-width: 992px)";
   $large: "(min-width: 1200px)";
+  $ml: "(min-width: 1400px)";
   $xl: "(min-width: 1800px)";
 
-  @if $point == small {
+  @if $point == xs {
+    @media #{$xs} { @content; }
+  }
+  @else if $point == small {
     @media #{$small} { @content; }
   }
   @else if $point == medium {
@@ -17,6 +23,9 @@ $primary-blue: #000;
   }
   @else if $point == large {
     @media #{$large}  { @content; }
+  }
+  @else if $point == ml {
+    @media #{$ml}  { @content; }
   }
   @else if $point == xl {
     @media #{$xl}  { @content; }
@@ -301,6 +310,37 @@ a.line {
 		background-size: cover;
 		background-repeat: no-repeat;
 	}
+	&#single-post-banner {
+
+		min-height: 0px;
+    	height: 80px;
+		background-position: top center;
+
+		@include bp(xs) {
+			min-height: 145px;
+			height: 145px;
+		}
+
+		@include bp(small) {
+			min-height: 230px;
+			height: 230px;
+		}
+
+		@include bp(large) {
+			min-height: 250px;
+			height: 250px;
+		}
+
+		@include bp(ml) {
+			min-height: 330px;
+			height: 330px;
+		}
+
+		@include bp(xl) {
+			min-height: 330px;
+			height: 330px;
+		}
+	}
 }
 
 #feature-split {
@@ -495,9 +535,17 @@ a.line {
 		}
 	}
 
+	h2 {
+		font-size: 30px;
+    	margin-top: 40px;
+	}
+
 	img {
 		max-width: 800px;
 		margin: 40px auto;
+		height: auto;
+		border: 2px solid $blue;
+		width: 100%;
 	}
 }
 
@@ -537,6 +585,11 @@ a.line {
 			}
 		}
 	}
+}
+
+
+.progressiveMedia, .aspectRatioPlaceholder-fill {
+	text-align: center;
 }
 
 
@@ -608,10 +661,25 @@ footer {
 		}
 	}
 
+	.third-foot {
+
+		ul {
+			margin-top: 10px;
+		}
+		a {
+			font-size: 17px;
+		}
+	}
+
 	.copyright-wrap {
 		padding-top: 15px;
 		padding-bottom: 20px;
 		border-top: 1px solid #000;
+
+		span {
+			display: block;
+			margin-top: 5px;
+		}
 	}
 
 	.top-footer {

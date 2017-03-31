@@ -22,7 +22,7 @@
 			</div>
 			<div class="col-md-4 third-foot">
 				<ul class="line">
-					<li><a href="http://northstar.store/vision/">About</a></li>
+					<li><a href="https://northstar.media/vision/">About</a></li>
 					<li><a href="mailto:david@perell.com">Contact</a></li>
 				</ul>
 			</div>
@@ -30,6 +30,7 @@
 		<div class="copyright-wrap row">
 			<div class="col-md-12 text-center">
 				&copy; <?php echo date("Y"); ?> The North Star. All rights reserved.
+				<span>Created by <a class="line" href="#">Wavey Media Group</a></span>
 			</div>
 		</div>
 	</div>

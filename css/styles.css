@@ -202,6 +202,30 @@ a.line:focus, a.line:hover {
   .full-sec-banner#blog-banner {
     background-size: cover;
     background-repeat: no-repeat; }
+  .full-sec-banner#single-post-banner {
+    min-height: 0px;
+    height: 80px;
+    background-position: top center; }
+    @media (min-width: 450px) {
+      .full-sec-banner#single-post-banner {
+        min-height: 145px;
+        height: 145px; } }
+    @media (min-width: 767px) {
+      .full-sec-banner#single-post-banner {
+        min-height: 230px;
+        height: 230px; } }
+    @media (min-width: 1200px) {
+      .full-sec-banner#single-post-banner {
+        min-height: 250px;
+        height: 250px; } }
+    @media (min-width: 1400px) {
+      .full-sec-banner#single-post-banner {
+        min-height: 330px;
+        height: 330px; } }
+    @media (min-width: 1800px) {
+      .full-sec-banner#single-post-banner {
+        min-height: 330px;
+        height: 330px; } }
 
 #feature-split .col-md-6 {
   color: #fff;
@@ -339,9 +363,15 @@ a.line:focus, a.line:hover {
     @media (min-width: 1800px) {
       .content-wrap p, .content-wrap li, .content-wrap a {
         font-size: 25px; } }
+  .content-wrap h2 {
+    font-size: 30px;
+    margin-top: 40px; }
   .content-wrap img {
     max-width: 800px;
-    margin: 40px auto; }
+    margin: 40px auto;
+    height: auto;
+    border: 2px solid #1a8df8;
+    width: 100%; }
 
 #blog-feed .article-row, #books-wrap .article-row, #podcast-wrap .article-row {
   padding: 40px 0px;
@@ -369,6 +399,9 @@ a.line:focus, a.line:hover {
     @media (min-width: 992px) {
       #blog-feed .post-excerpt .btn-wrap, #books-wrap .post-excerpt .btn-wrap, #podcast-wrap .post-excerpt .btn-wrap {
         margin-top: 40px; } }
+
+.progressiveMedia, .aspectRatioPlaceholder-fill {
+  text-align: center; }
 
 #vision-banner {
   background-size: cover;
@@ -410,10 +443,17 @@ footer {
   footer .first-foot img {
     max-height: 80px;
     margin: 0 auto; }
+  footer .third-foot ul {
+    margin-top: 10px; }
+  footer .third-foot a {
+    font-size: 17px; }
   footer .copyright-wrap {
     padding-top: 15px;
     padding-bottom: 20px;
     border-top: 1px solid #000; }
+    footer .copyright-wrap span {
+      display: block;
+      margin-top: 5px; }
   footer .top-footer {
     padding-bottom: 20px; }
     footer .top-footer ul {

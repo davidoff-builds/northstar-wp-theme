@@ -21,15 +21,13 @@ get_header(); ?>
 <section id="single-book-wrap" class="line">
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-md-8 col-md-offset-2">
 				<?php
 					while ( have_posts() ) : the_post();
 
-						get_template_part( 'template-parts/content-podcast', get_post_format() );
+						get_template_part( 'template-parts/content', get_post_format() );
 
 					endwhile; // End of the loop.
 					?>
-			</div>
 		</div>
 	</div>
 </section>
